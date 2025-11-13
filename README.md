@@ -98,7 +98,7 @@
 
 ---
 
-## 1. Understand Infrastructure as Code (IaC) Concepts
+# 1. Understand Infrastructure as Code (IaC) Concepts
 
 ### The Problem with Manual Configuration
 
@@ -177,7 +177,7 @@ It’s the roadmap of how infrastructure evolves over time.
 
 ---
 
-## Understanding Day 0, Day 1, and Day 2
+### Understanding Day 0, Day 1, and Day 2
 
 The **Day 0–2 model** is a simplified way to describe key stages in the **infrastructure lifecycle**.
 These aren’t literal days — they represent **phases** of infrastructure evolution.
