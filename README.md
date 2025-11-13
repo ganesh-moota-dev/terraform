@@ -189,11 +189,41 @@ These aren’t literal days — they represent **phases** of infrastructure evol
 | **Day 2** | *Go Live and Maintain* | Operate infrastructure in production, monitor performance, patch, and optimize.          |
 
 **Key Point:**
+```
 Day 0 → Before deployment
 Day 1 → During deployment
 Day 2 → After deployment (ongoing operations)
+```
+---
+
+## Idempotent vs Non-Idempotent in IaC
+
+1. **Idempotent**
+
+* **Meaning:** Running the same operation multiple times gives the **same result**.
+* **In IaC (e.g., Terraform):**
+  If you apply the same configuration again **without changing the code or state**, Terraform will detect that the desired state already matches the real infrastructure and **won’t create new resources**.
+* **Example:**
+  Running `terraform apply` twice without any changes → *No new resources are created.*
+* **Why:** Terraform compares the *current state* with the *desired configuration* and only makes changes when there’s a difference.
+* **Result:** Same end state, no duplication.
+
+2. **Non-Idempotent**
+
+* **Meaning:** Running the same operation multiple times causes **different results** (e.g., creates new resources each time).
+* **In manual or non-IaC processes:**
+  Each time you manually create infrastructure (like clicking “Create Instance” in the AWS Console), you end up with **additional instances**.
+* **Example:**
+  Clicking “Create VM” twice → *Two separate VMs are created.*
+* **Result:** Unpredictable or duplicate resources.
+
+| Concept                           | Behavior                                               | Example Outcome                                  |
+| --------------------------------- | ------------------------------------------------------ | ------------------------------------------------ |
+| **Idempotent (IaC)**              | Same configuration applied twice results in no changes | `terraform apply` twice → only one instance      |
+| **Non-Idempotent (Manual setup)** | Each execution creates a new resource                  | Clicking “Create Instance” twice → two instances |
 
 ---
+
 
 
 
