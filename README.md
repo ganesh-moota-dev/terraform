@@ -262,8 +262,6 @@ AWS CodePipeline, Jenkins, GitHub Actions, CircleCI, Azure DevOps.
 **Goal:**
 Run your application on the infrastructure you provisioned.
 
----
-
 ### 3.  **Orchestration**
 
 **Meaning:**
@@ -281,6 +279,8 @@ Kubernetes, Docker Swarm, AWS ECS, Apache Airflow.
 **Goal:**
 Automate and coordinate multiple infrastructure and app components to behave as one system.
 
+<br/>
+
 | Term              | What it Does                         | Example Tools            | Example Scenario                  |
 | ----------------- | ------------------------------------ | ------------------------ | --------------------------------- |
 | **Provisioning**  | Set up and prepare infrastructure    | Terraform, Ansible, Chef | Create EC2 instance or database   |
@@ -292,7 +292,7 @@ Automate and coordinate multiple infrastructure and app components to behave as 
 > Deployment = Put code on servers
 > Orchestration = Make everything work together
 ```
-
+---
 
 
 
