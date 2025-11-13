@@ -1,6 +1,6 @@
 # Terraform — Table of Contents
 
-## 1. Understand Infrastructure as Code (IaC) Concepts (6:28)
+## 1. Understand Infrastructure as Code (IaC) Concepts
 
 * What is Infrastructure as Code (IaC)?
 * Benefits of IaC
@@ -10,7 +10,7 @@
 
 ---
 
-## 2. Understand the Purpose of Terraform (6:30)
+## 2. Understand the Purpose of Terraform
 
 * What Problem Does Terraform Solve?
 * Terraform vs Other IaC Tools
@@ -20,7 +20,7 @@
 
 ---
 
-## 3. Understand Terraform Basics (6:31)
+## 3. Understand Terraform Basics
 
 * Terraform Configuration Files (.tf)
 * Providers, Resources, and Data Sources
@@ -30,7 +30,7 @@
 
 ---
 
-## 4. Use of Terraform Outside Core Workflows (6:34)
+## 4. Use of Terraform Outside Core Workflows
 
 * Terraform Import
 * Terraform Taint and Untaint
@@ -41,7 +41,7 @@
 
 ---
 
-## 5. Interact with Terraform Modules (6:38)
+## 5. Interact with Terraform Modules
 
 * What Are Modules?
 * Module Structure (Inputs, Outputs, Resources)
@@ -52,7 +52,7 @@
 
 ---
 
-## 6. Use the Core Terraform Workflow (6:40)
+## 6. Use the Core Terraform Workflow
 
 * Core Workflow Overview
 
@@ -65,7 +65,7 @@
 
 ---
 
-## 7. Implement and Maintain State (6:43)
+## 7. Implement and Maintain State
 
 * What is Terraform State?
 * Purpose of `terraform.tfstate`
@@ -77,7 +77,7 @@
 
 ---
 
-## 8. Regenerate and Modify Configuration (6:47)
+## 8. Regenerate and Modify Configuration
 
 * Handling Drift Between Configuration and Real Resources
 * Terraform Refresh
@@ -87,7 +87,7 @@
 
 ---
 
-## 9. Understand Terraform Cloud Capabilities (6:50)
+## 9. Understand Terraform Cloud Capabilities
 
 * What is Terraform Cloud and Terraform Enterprise?
 * Remote Operations and Workspaces
