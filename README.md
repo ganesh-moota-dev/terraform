@@ -98,3 +98,62 @@
 
 ---
 
+## 1. Understand Infrastructure as Code (IaC) Concepts
+
+### The Problem with Manual Configuration
+
+Manually configuring your cloud infrastructure can be useful when experimenting or prototyping, but it quickly becomes inefficient and error-prone as your system grows.
+
+**Drawbacks of manual setup:**
+
+* **Prone to human error:** It’s easy to misconfigure settings when doing things by hand.
+* **Hard to maintain consistency:** Ensuring every environment (dev, staging, prod) matches exactly becomes difficult.
+* **Compliance challenges:** It’s hard to verify that systems meet security or policy standards.
+* **Knowledge silos:** Configuration details often stay with individuals, making onboarding or handover difficult.
+* **No version history:** There’s no reliable record of what changed and when.
+
+---
+
+### What is Infrastructure as Code (IaC)?
+
+**Infrastructure as Code (IaC)** means defining your infrastructure using **code or configuration files**, rather than manually creating resources through a console or CLI.
+
+Terraform is one of the leading tools that enables IaC.
+
+**Core idea:**
+You write code that describes *what* your infrastructure should look like, and tools like Terraform handle *how* to make it happen.
+
+---
+
+### Benefits of IaC
+
+* **Automation:** Deploy, update, or destroy infrastructure automatically.
+* **Consistency:** Ensures every environment is identical (no “it works on my machine” issues).
+* **Version control:** IaC files can be stored in Git, allowing tracking and rollback of changes.
+* **Reusability:** You can reuse modules or templates across projects.
+* **Scalability:** Quickly replicate and scale infrastructure setups.
+* **Collaboration:** Teams can easily share and review infrastructure code.
+
+---
+
+### IaC as a Blueprint
+
+Think of IaC as a **blueprint** for your cloud infrastructure:
+
+* It defines your architecture’s structure and relationships.
+* It serves as documentation — anyone can read the code to understand your setup.
+* It makes spinning up new environments predictable and repeatable.
+
+---
+
+| Manual Configuration                | Infrastructure as Code           |
+| ----------------------------------- | -------------------------------- |
+| Manual setup through console or CLI | Automated setup using scripts    |
+| Error-prone and inconsistent        | Reliable and reproducible        |
+| Hard to track or audit changes      | Version-controlled and auditable |
+| Difficult to share knowledge        | Easy to share and collaborate    |
+| Slow and repetitive                 | Fast, scalable, and automated    |
+
+---
+
+
