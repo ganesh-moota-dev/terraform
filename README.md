@@ -224,6 +224,75 @@ Day 2 → After deployment (ongoing operations)
 
 ---
 
+## Provisioning vs Deployment vs Orchestration
+
+These three terms describe **different stages** of setting up and running applications in the cloud.
+They often work **together** but mean **different things**.
+
+### 1. **Provisioning**
+
+**Meaning:**
+Provisioning means **preparing and setting up the infrastructure** — such as servers, networks, storage, and databases — so they are ready for use.
+
+**Example:**
+
+* Launching an EC2 instance on AWS.
+* Creating a database or S3 bucket.
+* Setting up system configurations and installing required software.
+
+**Tools used:**
+Terraform, Ansible, Chef, Puppet, Bash scripts, PowerShell, or Cloud-init.
+
+**Goal:**
+Make the server or cloud environment ready to host your application.
+
+### 2. **Deployment**
+
+**Meaning:**
+Deployment is **putting your application code** onto the provisioned infrastructure and making it live.
+
+**Example:**
+
+* Uploading your web app to the EC2 instance.
+* Using CI/CD pipelines (like Jenkins or GitHub Actions) to push the latest app version.
+
+**Tools used:**
+AWS CodePipeline, Jenkins, GitHub Actions, CircleCI, Azure DevOps.
+
+**Goal:**
+Run your application on the infrastructure you provisioned.
+
+---
+
+### 3.  **Orchestration**
+
+**Meaning:**
+Orchestration is about **coordinating and managing multiple services or servers** to work together automatically.
+
+**Example:**
+
+* Starting and stopping multiple containers.
+* Managing dependencies between services.
+* Scaling up or down automatically when traffic changes.
+
+**Tools used:**
+Kubernetes, Docker Swarm, AWS ECS, Apache Airflow.
+
+**Goal:**
+Automate and coordinate multiple infrastructure and app components to behave as one system.
+
+| Term              | What it Does                         | Example Tools            | Example Scenario                  |
+| ----------------- | ------------------------------------ | ------------------------ | --------------------------------- |
+| **Provisioning**  | Set up and prepare infrastructure    | Terraform, Ansible, Chef | Create EC2 instance or database   |
+| **Deployment**    | Deliver and run application code     | Jenkins, GitHub Actions  | Push app to EC2 or Kubernetes pod |
+| **Orchestration** | Coordinate multiple systems/services | Kubernetes, AWS ECS      | Manage containers and auto-scale  |
+
+```
+> Provisioning = Get servers ready
+> Deployment = Put code on servers
+> Orchestration = Make everything work together
+```
+
 
 
 
