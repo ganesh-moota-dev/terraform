@@ -156,4 +156,44 @@ Think of IaC as a **blueprint** for your cloud infrastructure:
 
 ---
 
+### What is an Infrastructure Lifecycle?
+
+The **Infrastructure Lifecycle** refers to the sequence of stages that a DevOps or cloud engineer follows to manage infrastructure from start to finish.
+
+It covers everything from **planning and building** to **maintaining and retiring** infrastructure resources.
+
+**In simple terms:**
+It’s the roadmap of how infrastructure evolves over time.
+
+**Typical Phases:**
+
+* **Plan** – Define business needs, architecture, and requirements.
+* **Design** – Create blueprints and select tools/services.
+* **Build** – Deploy or provision the infrastructure.
+* **Test** – Validate performance, security, and reliability.
+* **Deliver** – Move to production or release to users.
+* **Maintain** – Monitor, update, and optimize.
+* **Retire** – Decommission outdated or unused resources.
+
+---
+
+## Understanding Day 0, Day 1, and Day 2
+
+The **Day 0–2 model** is a simplified way to describe key stages in the **infrastructure lifecycle**.
+These aren’t literal days — they represent **phases** of infrastructure evolution.
+
+| Phase     | Description            | Activities                                                                               |
+| --------- | ---------------------- | ---------------------------------------------------------------------------------------- |
+| **Day 0** | *Plan and Design*      | Define architecture, choose tools, set goals, and prepare automation strategies.         |
+| **Day 1** | *Develop and Iterate*  | Write IaC code (like Terraform), deploy initial setups, test configurations, and refine. |
+| **Day 2** | *Go Live and Maintain* | Operate infrastructure in production, monitor performance, patch, and optimize.          |
+
+**Key Point:**
+Day 0 → Before deployment
+Day 1 → During deployment
+Day 2 → After deployment (ongoing operations)
+
+---
+
+
 
