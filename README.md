@@ -492,7 +492,7 @@ To spot drift:
 
 ---
 
-### Contributing
+## Contributing
 
 Contributions are welcome! If you would like to contribute by improving existing content or fix errors, please open a pull request
 
@@ -508,6 +508,6 @@ Steps:
 Key points:
 * Provide clear commit messages where applicable.
 
-### License
+## License
 
 This project is open source and contributions from the community are welcome. By contributing, you agree that your contributions will be licensed under the same open terms as the project.
