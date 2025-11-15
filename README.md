@@ -100,7 +100,7 @@
 
 # 1. Understand Infrastructure as Code (IaC) Concepts
 
-### The Problem with Manual Configuration
+## The Problem with Manual Configuration
 
 Manually configuring your cloud infrastructure can be useful when experimenting or prototyping, but it quickly becomes inefficient and error-prone as your system grows.
 
@@ -114,7 +114,7 @@ Manually configuring your cloud infrastructure can be useful when experimenting 
 
 ---
 
-### What is Infrastructure as Code (IaC)?
+## What is Infrastructure as Code (IaC)?
 
 **Infrastructure as Code (IaC)** means defining your infrastructure using **code or configuration files**, rather than manually creating resources through a console or CLI.
 
@@ -125,7 +125,7 @@ You write code that describes *what* your infrastructure should look like, and t
 
 ---
 
-### Benefits of IaC
+## Benefits of IaC
 
 * **Automation:** Deploy, update, or destroy infrastructure automatically.
 * **Consistency:** Ensures every environment is identical (no “it works on my machine” issues).
@@ -136,7 +136,7 @@ You write code that describes *what* your infrastructure should look like, and t
 
 ---
 
-### IaC as a Blueprint
+## IaC as a Blueprint
 
 Think of IaC as a **blueprint** for your cloud infrastructure:
 
@@ -156,7 +156,7 @@ Think of IaC as a **blueprint** for your cloud infrastructure:
 
 ---
 
-### What is an Infrastructure Lifecycle?
+## What is an Infrastructure Lifecycle?
 
 The **Infrastructure Lifecycle** refers to the sequence of stages that a DevOps or cloud engineer follows to manage infrastructure from start to finish.
 
@@ -177,7 +177,7 @@ It’s the roadmap of how infrastructure evolves over time.
 
 ---
 
-### Understanding Day 0, Day 1, and Day 2
+## Understanding Day 0, Day 1, and Day 2
 
 The **Day 0–2 model** is a simplified way to describe key stages in the **infrastructure lifecycle**.
 These aren’t literal days — they represent **phases** of infrastructure evolution.
