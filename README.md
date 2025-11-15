@@ -26,7 +26,13 @@
 * [Terraform CLI Overview](#3-understand-terraform-basics)
 * [Directory Structure and Best Practices](#3-understand-terraform-basics)
 
-### 4. Use of Terraform Outside Core Workflows
+### 4. Configuration Drift
+* What is Configuration Drift?
+* How to Detect Configuration Drift?
+* How to Correct Configuration Drift??
+* How to Prevent Configuration Drift
+
+### 5. Use of Terraform Outside Core Workflows
 
 * [Terraform Import](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Taint and Untaint](#4-use-of-terraform-outside-core-workflows)
@@ -226,6 +232,57 @@ As your infrastructure skills grow, you'll work with three big concepts:
 
 **Why it matters:**  
 Understanding the lifecycle, day phases, and different types of automation helps you become an effective infrastructure developer. You’ll be able to plan robust systems, know which tools to use at each stage, and keep everything running smoothly as your projects and responsibilities scale up.
+
+---
+
+## Configuration Drift
+
+Configuration drift is a common challenge when working with cloud infrastructure using IaC tools like Terraform. Here's what you need to know as a developer:
+
+### What is Configuration Drift?
+
+**Configuration drift** happens when your actual cloud infrastructure doesn't match the desired state defined in your Terraform code. This usually occurs because:
+- Changes were made manually in the cloud console.
+- Scripts or other automation tools modify resources outside of Terraform.
+- The infrastructure evolves, but code and state files are not updated.
+
+**Why does it matter?**  
+Drift can lead to inconsistent environments, surprise outages, failed deployments, and extra debugging headaches.
+
+---
+
+### How to Detect Configuration Drift
+
+To spot drift:
+- **Terraform Plan:** Run `terraform plan` to compare your code-defined state to the real infrastructure.
+- **Terraform Refresh:** Use `terraform refresh` to update Terraform state based on what's actually deployed before planning changes.
+- **Manual audits:** Reviewing the cloud provider's dashboard versus IaC code (best for small setups).
+
+**Signs of drift:**  
+- `terraform plan` reports unexpected changes.
+- Resources missing or settings changed in the cloud but not in code.
+
+---
+
+### How to Correct Configuration Drift
+
+**Best options for fixing drift:**
+- **Reapply Code:** Run `terraform apply` to bring infrastructure back in sync with your code.
+- **Update Code:** If needed, update your Terraform files to match legit manual changes, then apply.
+- **Import Resources:** For resources created outside Terraform, use `terraform import` to bring them under code management.
+
+---
+
+### How to Prevent Configuration Drift
+
+**Practical strategies:**
+- **Use IaC exclusively:** Avoid manual changes in the cloud console as much as possible.
+- **Access controls:** Limit who can modify infrastructure outside of Terraform (use IAM policies).
+- **Automated checks:** Integrate regular `terraform plan` or drift-detection solutions into your CI/CD pipelines.
+- **Peer reviews:** Ensure all infrastructure changes go through version-controlled Terraform files and code review.
+
+**In summary:**  
+* Drift undermines IaC benefits—catch it early, fix it quickly, and lock down your workflow so that your code and your cloud never get out of sync.
 
 ---
 
