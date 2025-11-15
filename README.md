@@ -1,9 +1,11 @@
-# Terraform — Table of Contents
+# Terraform Guide
+
+## Table of Contents
 
 [![Terraform](https://img.shields.io/badge/terraform-%3E%3D1.0-623CE4)](https://www.terraform.io/)
 [![License](https://img.shields.io/badge/license-open--source-green)](LICENSE)
 
-## 1. Understand Infrastructure as Code (IaC) Concepts
+### 1. Understand Infrastructure as Code (IaC) Concepts
 
 * [What is Infrastructure as Code (IaC)?](#1-understand-infrastructure-as-code-iac-concepts)
 * [Benefits of IaC](#1-understand-infrastructure-as-code-iac-concepts)
@@ -11,7 +13,7 @@
 * [Idempotency and Reproducibility](#1-understand-infrastructure-as-code-iac-concepts)
 * [Tools in the IaC Ecosystem (Terraform, Ansible, CloudFormation)](#1-understand-infrastructure-as-code-iac-concepts)
 
-## 2. Understand the Purpose of Terraform
+### 2. Understand the Purpose of Terraform
 
 * [What Problem Does Terraform Solve?](#2-understand-the-purpose-of-terraform)
 * [Terraform vs Other IaC Tools](#2-understand-the-purpose-of-terraform)
@@ -19,7 +21,7 @@
 * [Multi-Cloud and Provider-Agnostic Nature](#2-understand-the-purpose-of-terraform)
 * [Common Use Cases](#2-understand-the-purpose-of-terraform)
 
-## 3. Understand Terraform Basics
+### 3. Understand Terraform Basics
 
 * [Terraform Configuration Files (.tf)](#3-understand-terraform-basics)
 * [Providers, Resources, and Data Sources](#3-understand-terraform-basics)
@@ -27,7 +29,7 @@
 * [Terraform CLI Overview](#3-understand-terraform-basics)
 * [Directory Structure and Best Practices](#3-understand-terraform-basics)
 
-## 4. Use of Terraform Outside Core Workflows
+### 4. Use of Terraform Outside Core Workflows
 
 * [Terraform Import](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Taint and Untaint](#4-use-of-terraform-outside-core-workflows)
@@ -36,7 +38,7 @@
 * [Terraform Format (fmt) and Validate](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Workspaces](#4-use-of-terraform-outside-core-workflows)
 
-## 5. Interact with Terraform Modules
+### 5. Interact with Terraform Modules
 
 * [What Are Modules?](#5-interact-with-terraform-modules)
 * [Module Structure (Inputs, Outputs, Resources)](#5-interact-with-terraform-modules)
@@ -45,7 +47,7 @@
 * [Passing Variables Between Modules](#5-interact-with-terraform-modules)
 * [Module Versioning and Best Practices](#5-interact-with-terraform-modules)
 
-## 6. Use the Core Terraform Workflow
+### 6. Use the Core Terraform Workflow
 
 * [Core Workflow Overview](#6-use-the-core-terraform-workflow)
 
@@ -56,7 +58,7 @@
 * [Understanding Execution Plans](#6-use-the-core-terraform-workflow)
 * [Lifecycle of Infrastructure Changes](#6-use-the-core-terraform-workflow)
 
-## 7. Implement and Maintain State
+### 7. Implement and Maintain State
 
 * [What is Terraform State?](#7-implement-and-maintain-state)
 * [Purpose of `terraform.tfstate`](#7-implement-and-maintain-state)
@@ -66,7 +68,7 @@
 * [Sensitive Data in State](#7-implement-and-maintain-state)
 * [Best Practices for State Management](#7-implement-and-maintain-state)
 
-## 8. Regenerate and Modify Configuration
+### 8. Regenerate and Modify Configuration
 
 * [Handling Drift Between Configuration and Real Resources](#8-regenerate-and-modify-configuration)
 * [Terraform Refresh](#8-regenerate-and-modify-configuration)
@@ -74,7 +76,7 @@
 * [Moving Resources Between States](#8-regenerate-and-modify-configuration)
 * [Using `terraform import` for Existing Infrastructure](#8-regenerate-and-modify-configuration)
 
-## 9. Understand Terraform Cloud Capabilities
+### 9. Understand Terraform Cloud Capabilities
 
 * [What is Terraform Cloud and Terraform Enterprise?](#9-understand-terraform-cloud-capabilities)
 * [Remote Operations and Workspaces](#9-understand-terraform-cloud-capabilities)
@@ -85,9 +87,9 @@
 
 ---
 
-# 1. Understand Infrastructure as Code (IaC) Concepts
+## 1. Understand Infrastructure as Code (IaC) Concepts
 
-## The Problem with Manual Configuration
+### The Problem with Manual Configuration
 
 Manually configuring your cloud infrastructure can be useful when experimenting or prototyping, but it quickly becomes inefficient and error-prone as your system grows.
 
@@ -101,7 +103,7 @@ Manually configuring your cloud infrastructure can be useful when experimenting 
 
 ---
 
-## What is Infrastructure as Code (IaC)?
+### What is Infrastructure as Code (IaC)?
 
 **Infrastructure as Code (IaC)** means defining your infrastructure using **code or configuration files**, rather than manually creating resources through a console or CLI.
 
@@ -112,7 +114,7 @@ You write code that describes *what* your infrastructure should look like, and t
 
 ---
 
-## Benefits of IaC
+### Benefits of IaC
 
 * **Automation:** Deploy, update, or destroy infrastructure automatically.
 * **Consistency:** Ensures every environment is identical (no “it works on my machine” issues).
@@ -123,7 +125,7 @@ You write code that describes *what* your infrastructure should look like, and t
 
 ---
 
-## IaC as a Blueprint
+### IaC as a Blueprint
 
 Think of IaC as a **blueprint** for your cloud infrastructure:
 
@@ -143,7 +145,7 @@ Think of IaC as a **blueprint** for your cloud infrastructure:
 
 ---
 
-## What is an Infrastructure Lifecycle?
+### What is an Infrastructure Lifecycle?
 
 The **Infrastructure Lifecycle** refers to the sequence of stages that a DevOps or cloud engineer follows to manage infrastructure from start to finish.
 
@@ -164,7 +166,7 @@ It’s the roadmap of how infrastructure evolves over time.
 
 ---
 
-## Understanding Day 0, Day 1, and Day 2
+### Understanding Day 0, Day 1, and Day 2
 
 The **Day 0–2 model** is a simplified way to describe key stages in the **infrastructure lifecycle**.
 These aren’t literal days — they represent **phases** of infrastructure evolution.
@@ -183,13 +185,13 @@ Day 2 → After deployment (ongoing operations)
 ```
 ---
 
-## Idempotent vs Non-Idempotent in IaC
+### Idempotent vs Non-Idempotent in IaC
 
 1. **Idempotent**
 
 * **Meaning:** Running the same operation multiple times gives the **same result**.
 * **In IaC (e.g., Terraform):**
-  If you apply the same configuration again **without changing the code or state**, Terraform will detect that the desired state already matches the real infrastructure and **won’t create new r[...]**
+  If you apply the same configuration again **without changing the code or state**, Terraform will detect that the desired state already matches the real infrastructure and **won’t create new resources**.
 * **Example:**
   Running `terraform apply` twice without any changes → *No new resources are created.*
 * **Why:** Terraform compares the *current state* with the *desired configuration* and only makes changes when there’s a difference.
@@ -211,12 +213,12 @@ Day 2 → After deployment (ongoing operations)
 
 ---
 
-## Provisioning vs Deployment vs Orchestration
+### Provisioning vs Deployment vs Orchestration
 
 These three terms describe **different stages** of setting up and running applications in the cloud.
 They often work **together** but mean **different things**.
 
-### 1. **Provisioning**
+#### 1. **Provisioning**
 
 **Meaning:**
 Provisioning means **preparing and setting up the infrastructure** — such as servers, networks, storage, and databases — so they are ready for use.
@@ -233,7 +235,7 @@ Terraform, Ansible, Chef, Puppet, Bash scripts, PowerShell, or Cloud-init.
 **Goal:**
 Make the server or cloud environment ready to host your application.
 
-### 2. **Deployment**
+#### 2. **Deployment**
 
 **Meaning:**
 Deployment is **putting your application code** onto the provisioned infrastructure and making it live.
@@ -249,7 +251,7 @@ AWS CodePipeline, Jenkins, GitHub Actions, CircleCI, Azure DevOps.
 **Goal:**
 Run your application on the infrastructure you provisioned.
 
-### 3.  **Orchestration**
+#### 3.  **Orchestration**
 
 **Meaning:**
 Orchestration is about **coordinating and managing multiple services or servers** to work together automatically.
@@ -281,7 +283,7 @@ Automate and coordinate multiple infrastructure and app components to behave as 
 ```
 ---
 
-## Contributing
+### Contributing
 
 Contributions are welcome! If you would like to contribute, please open an issue or a pull request. For larger changes, please create an issue first to discuss the proposed change. Optionally add a CONTRIBUTING.md file with more details.
 
@@ -291,6 +293,6 @@ Key points:
 * Open issues for bugs or feature requests.
 * Provide clear commit messages and include tests/examples where applicable.
 
-## License
+### License
 
 This project is open source and contributions from the community are welcome. By contributing, you agree that your contributions will be licensed under the same open terms as the project.
