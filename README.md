@@ -18,15 +18,7 @@
 * [Understanding Day 0, Day 1, and Day 2](#understanding-day-0-day-1-and-day-2)
 * [Provisioning vs Deployment vs Orchestration](#provisioning-vs-deployment-vs-orchestration)
 
-### 3. Understand the Purpose of Terraform
-
-* [What Problem Does Terraform Solve?](#2-understand-the-purpose-of-terraform)
-* [Terraform vs Other IaC Tools](#2-understand-the-purpose-of-terraform)
-* [Key Features and Advantages](#2-understand-the-purpose-of-terraform)
-* [Multi-Cloud and Provider-Agnostic Nature](#2-understand-the-purpose-of-terraform)
-* [Common Use Cases](#2-understand-the-purpose-of-terraform)
-
-### 4. Understand Terraform Basics
+### 3. Understand Terraform Basics
 
 * [Terraform Configuration Files (.tf)](#3-understand-terraform-basics)
 * [Providers, Resources, and Data Sources](#3-understand-terraform-basics)
@@ -34,7 +26,7 @@
 * [Terraform CLI Overview](#3-understand-terraform-basics)
 * [Directory Structure and Best Practices](#3-understand-terraform-basics)
 
-### 5. Use of Terraform Outside Core Workflows
+### 4. Use of Terraform Outside Core Workflows
 
 * [Terraform Import](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Taint and Untaint](#4-use-of-terraform-outside-core-workflows)
@@ -43,7 +35,7 @@
 * [Terraform Format (fmt) and Validate](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Workspaces](#4-use-of-terraform-outside-core-workflows)
 
-### 6. Interact with Terraform Modules
+### 5. Interact with Terraform Modules
 
 * [What Are Modules?](#5-interact-with-terraform-modules)
 * [Module Structure (Inputs, Outputs, Resources)](#5-interact-with-terraform-modules)
@@ -52,7 +44,7 @@
 * [Passing Variables Between Modules](#5-interact-with-terraform-modules)
 * [Module Versioning and Best Practices](#5-interact-with-terraform-modules)
 
-### 7. Use the Core Terraform Workflow
+### 6. Use the Core Terraform Workflow
 
 * [Core Workflow Overview](#6-use-the-core-terraform-workflow)
 
@@ -63,7 +55,7 @@
 * [Understanding Execution Plans](#6-use-the-core-terraform-workflow)
 * [Lifecycle of Infrastructure Changes](#6-use-the-core-terraform-workflow)
 
-### 8. Implement and Maintain State
+### 7. Implement and Maintain State
 
 * [What is Terraform State?](#7-implement-and-maintain-state)
 * [Purpose of `terraform.tfstate`](#7-implement-and-maintain-state)
@@ -73,7 +65,7 @@
 * [Sensitive Data in State](#7-implement-and-maintain-state)
 * [Best Practices for State Management](#7-implement-and-maintain-state)
 
-### 9. Regenerate and Modify Configuration
+### 8. Regenerate and Modify Configuration
 
 * [Handling Drift Between Configuration and Real Resources](#8-regenerate-and-modify-configuration)
 * [Terraform Refresh](#8-regenerate-and-modify-configuration)
@@ -81,7 +73,7 @@
 * [Moving Resources Between States](#8-regenerate-and-modify-configuration)
 * [Using `terraform import` for Existing Infrastructure](#8-regenerate-and-modify-configuration)
 
-### 10. Understand Terraform Cloud Capabilities
+### 9. Understand Terraform Cloud Capabilities
 
 * [What is Terraform Cloud and Terraform Enterprise?](#9-understand-terraform-cloud-capabilities)
 * [Remote Operations and Workspaces](#9-understand-terraform-cloud-capabilities)
