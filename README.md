@@ -234,11 +234,13 @@ Understanding the lifecycle, day phases, and different types of automation helps
 Contributions are welcome! If you would like to contribute by improving existing content or fix errors, please open a pull request
 
 Steps:
-Fork the repository
-Create a feature branch: git checkout -b feature/your-feature-name
-Commit your changes: git commit -m 'updated content for section 1'
-Push to the branch: git push origin feature/your-feature-name
-Submit a pull request
+```
+1. Fork the repository
+2. Create a feature branch: git checkout -b feature/your-feature-name
+3. Commit your changes: git commit -m 'updated content for section 1'
+4. Push to the branch: git push origin feature/your-feature-name
+5. Submit a pull request
+```
 
 Key points:
 * Provide clear commit messages where applicable.
