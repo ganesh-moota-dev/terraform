@@ -1,100 +1,104 @@
 # Terraform — Table of Contents
 
+[![Terraform](https://img.shields.io/badge/terraform-%3E%3D1.0-623CE4)](https://www.terraform.io/)
+[![CI](https://github.com/ganesh-moota-dev/terraform/actions/workflows/ci.yml/badge.svg)](https://github.com/ganesh-moota-dev/terraform/actions)
+[![License](https://img.shields.io/badge/license-open--source-green)](LICENSE)
+
 ## 1. Understand Infrastructure as Code (IaC) Concepts
 
-* What is Infrastructure as Code (IaC)?
-* Benefits of IaC
-* Declarative vs Imperative Approaches
-* Idempotency and Reproducibility
-* Tools in the IaC Ecosystem (Terraform, Ansible, CloudFormation)
+* [What is Infrastructure as Code (IaC)?](#1-understand-infrastructure-as-code-iac-concepts)
+* [Benefits of IaC](#1-understand-infrastructure-as-code-iac-concepts)
+* [Declarative vs Imperative Approaches](#1-understand-infrastructure-as-code-iac-concepts)
+* [Idempotency and Reproducibility](#1-understand-infrastructure-as-code-iac-concepts)
+* [Tools in the IaC Ecosystem (Terraform, Ansible, CloudFormation)](#1-understand-infrastructure-as-code-iac-concepts)
 
 ---
 
 ## 2. Understand the Purpose of Terraform
 
-* What Problem Does Terraform Solve?
-* Terraform vs Other IaC Tools
-* Key Features and Advantages
-* Multi-Cloud and Provider-Agnostic Nature
-* Common Use Cases
+* [What Problem Does Terraform Solve?](#2-understand-the-purpose-of-terraform)
+* [Terraform vs Other IaC Tools](#2-understand-the-purpose-of-terraform)
+* [Key Features and Advantages](#2-understand-the-purpose-of-terraform)
+* [Multi-Cloud and Provider-Agnostic Nature](#2-understand-the-purpose-of-terraform)
+* [Common Use Cases](#2-understand-the-purpose-of-terraform)
 
 ---
 
 ## 3. Understand Terraform Basics
 
-* Terraform Configuration Files (.tf)
-* Providers, Resources, and Data Sources
-* Input Variables and Outputs
-* Terraform CLI Overview
-* Directory Structure and Best Practices
+* [Terraform Configuration Files (.tf)](#3-understand-terraform-basics)
+* [Providers, Resources, and Data Sources](#3-understand-terraform-basics)
+* [Input Variables and Outputs](#3-understand-terraform-basics)
+* [Terraform CLI Overview](#3-understand-terraform-basics)
+* [Directory Structure and Best Practices](#3-understand-terraform-basics)
 
 ---
 
 ## 4. Use of Terraform Outside Core Workflows
 
-* Terraform Import
-* Terraform Taint and Untaint
-* Terraform Console
-* Terraform Graph
-* Terraform Format (fmt) and Validate
-* Terraform Workspaces
+* [Terraform Import](#4-use-of-terraform-outside-core-workflows)
+* [Terraform Taint and Untaint](#4-use-of-terraform-outside-core-workflows)
+* [Terraform Console](#4-use-of-terraform-outside-core-workflows)
+* [Terraform Graph](#4-use-of-terraform-outside-core-workflows)
+* [Terraform Format (fmt) and Validate](#4-use-of-terraform-outside-core-workflows)
+* [Terraform Workspaces](#4-use-of-terraform-outside-core-workflows)
 
 ---
 
 ## 5. Interact with Terraform Modules
 
-* What Are Modules?
-* Module Structure (Inputs, Outputs, Resources)
-* Using Public Modules from Terraform Registry
-* Creating and Calling Custom Modules
-* Passing Variables Between Modules
-* Module Versioning and Best Practices
+* [What Are Modules?](#5-interact-with-terraform-modules)
+* [Module Structure (Inputs, Outputs, Resources)](#5-interact-with-terraform-modules)
+* [Using Public Modules from Terraform Registry](#5-interact-with-terraform-modules)
+* [Creating and Calling Custom Modules](#5-interact-with-terraform-modules)
+* [Passing Variables Between Modules](#5-interact-with-terraform-modules)
+* [Module Versioning and Best Practices](#5-interact-with-terraform-modules)
 
 ---
 
 ## 6. Use the Core Terraform Workflow
 
-* Core Workflow Overview
+* [Core Workflow Overview](#6-use-the-core-terraform-workflow)
 
   * `terraform init`
   * `terraform plan`
   * `terraform apply`
   * `terraform destroy`
-* Understanding Execution Plans
-* Lifecycle of Infrastructure Changes
+* [Understanding Execution Plans](#6-use-the-core-terraform-workflow)
+* [Lifecycle of Infrastructure Changes](#6-use-the-core-terraform-workflow)
 
 ---
 
 ## 7. Implement and Maintain State
 
-* What is Terraform State?
-* Purpose of `terraform.tfstate`
-* Local vs Remote State
-* State Locking and Consistency
-* State Commands (`terraform state list`, `mv`, `rm`, `show`)
-* Sensitive Data in State
-* Best Practices for State Management
+* [What is Terraform State?](#7-implement-and-maintain-state)
+* [Purpose of `terraform.tfstate`](#7-implement-and-maintain-state)
+* [Local vs Remote State](#7-implement-and-maintain-state)
+* [State Locking and Consistency](#7-implement-and-maintain-state)
+* [State Commands (`terraform state list`, `mv`, `rm`, `show`)](#7-implement-and-maintain-state)
+* [Sensitive Data in State](#7-implement-and-maintain-state)
+* [Best Practices for State Management](#7-implement-and-maintain-state)
 
 ---
 
 ## 8. Regenerate and Modify Configuration
 
-* Handling Drift Between Configuration and Real Resources
-* Terraform Refresh
-* Refactoring and Reusing Configurations
-* Moving Resources Between States
-* Using `terraform import` for Existing Infrastructure
+* [Handling Drift Between Configuration and Real Resources](#8-regenerate-and-modify-configuration)
+* [Terraform Refresh](#8-regenerate-and-modify-configuration)
+* [Refactoring and Reusing Configurations](#8-regenerate-and-modify-configuration)
+* [Moving Resources Between States](#8-regenerate-and-modify-configuration)
+* [Using `terraform import` for Existing Infrastructure](#8-regenerate-and-modify-configuration)
 
 ---
 
 ## 9. Understand Terraform Cloud Capabilities
 
-* What is Terraform Cloud and Terraform Enterprise?
-* Remote Operations and Workspaces
-* Version Control Integration
-* State Storage in Terraform Cloud
-* Team Access Controls and Policy Enforcement
-* Cost Estimation and Notifications
+* [What is Terraform Cloud and Terraform Enterprise?](#9-understand-terraform-cloud-capabilities)
+* [Remote Operations and Workspaces](#9-understand-terraform-cloud-capabilities)
+* [Version Control Integration](#9-understand-terraform-cloud-capabilities)
+* [State Storage in Terraform Cloud](#9-understand-terraform-cloud-capabilities)
+* [Team Access Controls and Policy Enforcement](#9-understand-terraform-cloud-capabilities)
+* [Cost Estimation and Notifications](#9-understand-terraform-cloud-capabilities)
 
 ---
 
@@ -202,7 +206,7 @@ Day 2 → After deployment (ongoing operations)
 
 * **Meaning:** Running the same operation multiple times gives the **same result**.
 * **In IaC (e.g., Terraform):**
-  If you apply the same configuration again **without changing the code or state**, Terraform will detect that the desired state already matches the real infrastructure and **won’t create new resources**.
+  If you apply the same configuration again **without changing the code or state**, Terraform will detect that the desired state already matches the real infrastructure and **won’t create new r[...]**
 * **Example:**
   Running `terraform apply` twice without any changes → *No new resources are created.*
 * **Why:** Terraform compares the *current state* with the *desired configuration* and only makes changes when there’s a difference.
@@ -294,5 +298,16 @@ Automate and coordinate multiple infrastructure and app components to behave as 
 ```
 ---
 
+## Contributing
 
+Contributions are welcome! If you would like to contribute, please open an issue or a pull request. For larger changes, please create an issue first to discuss the proposed change. Optionally add a CONTRIBUTING.md file with more details.
 
+Key points:
+
+* Be respectful and follow a collaborative approach.
+* Open issues for bugs or feature requests.
+* Provide clear commit messages and include tests/examples where applicable.
+
+## License
+
+This project is open source and contributions from the community are welcome. By contributing, you agree that your contributions will be licensed under the same open terms as the project.
