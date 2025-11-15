@@ -1,7 +1,6 @@
 # Terraform — Table of Contents
 
 [![Terraform](https://img.shields.io/badge/terraform-%3E%3D1.0-623CE4)](https://www.terraform.io/)
-[![CI](https://github.com/ganesh-moota-dev/terraform/actions/workflows/ci.yml/badge.svg)](https://github.com/ganesh-moota-dev/terraform/actions)
 [![License](https://img.shields.io/badge/license-open--source-green)](LICENSE)
 
 ## 1. Understand Infrastructure as Code (IaC) Concepts
