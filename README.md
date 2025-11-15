@@ -11,8 +11,6 @@
 * [Idempotency and Reproducibility](#1-understand-infrastructure-as-code-iac-concepts)
 * [Tools in the IaC Ecosystem (Terraform, Ansible, CloudFormation)](#1-understand-infrastructure-as-code-iac-concepts)
 
----
-
 ## 2. Understand the Purpose of Terraform
 
 * [What Problem Does Terraform Solve?](#2-understand-the-purpose-of-terraform)
@@ -21,8 +19,6 @@
 * [Multi-Cloud and Provider-Agnostic Nature](#2-understand-the-purpose-of-terraform)
 * [Common Use Cases](#2-understand-the-purpose-of-terraform)
 
----
-
 ## 3. Understand Terraform Basics
 
 * [Terraform Configuration Files (.tf)](#3-understand-terraform-basics)
@@ -30,8 +26,6 @@
 * [Input Variables and Outputs](#3-understand-terraform-basics)
 * [Terraform CLI Overview](#3-understand-terraform-basics)
 * [Directory Structure and Best Practices](#3-understand-terraform-basics)
-
----
 
 ## 4. Use of Terraform Outside Core Workflows
 
@@ -42,8 +36,6 @@
 * [Terraform Format (fmt) and Validate](#4-use-of-terraform-outside-core-workflows)
 * [Terraform Workspaces](#4-use-of-terraform-outside-core-workflows)
 
----
-
 ## 5. Interact with Terraform Modules
 
 * [What Are Modules?](#5-interact-with-terraform-modules)
@@ -52,8 +44,6 @@
 * [Creating and Calling Custom Modules](#5-interact-with-terraform-modules)
 * [Passing Variables Between Modules](#5-interact-with-terraform-modules)
 * [Module Versioning and Best Practices](#5-interact-with-terraform-modules)
-
----
 
 ## 6. Use the Core Terraform Workflow
 
@@ -66,8 +56,6 @@
 * [Understanding Execution Plans](#6-use-the-core-terraform-workflow)
 * [Lifecycle of Infrastructure Changes](#6-use-the-core-terraform-workflow)
 
----
-
 ## 7. Implement and Maintain State
 
 * [What is Terraform State?](#7-implement-and-maintain-state)
@@ -78,8 +66,6 @@
 * [Sensitive Data in State](#7-implement-and-maintain-state)
 * [Best Practices for State Management](#7-implement-and-maintain-state)
 
----
-
 ## 8. Regenerate and Modify Configuration
 
 * [Handling Drift Between Configuration and Real Resources](#8-regenerate-and-modify-configuration)
@@ -87,8 +73,6 @@
 * [Refactoring and Reusing Configurations](#8-regenerate-and-modify-configuration)
 * [Moving Resources Between States](#8-regenerate-and-modify-configuration)
 * [Using `terraform import` for Existing Infrastructure](#8-regenerate-and-modify-configuration)
-
----
 
 ## 9. Understand Terraform Cloud Capabilities
 
