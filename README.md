@@ -224,8 +224,6 @@ As your infrastructure skills grow, you'll work with three big concepts:
 | Deployment      | Releasing app/software        | GitHub Actions, Jenkins    | Deploy web app to server          |
 | Orchestration   | Coordinating many resources   | Kubernetes, AWS ECS        | Auto-scale containers, manage DBs |
 
----
-
 **Why it matters:**  
 Understanding the lifecycle, day phases, and different types of automation helps you become an effective infrastructure developer. You’ll be able to plan robust systems, know which tools to use at each stage, and keep everything running smoothly as your projects and responsibilities scale up.
 
@@ -233,13 +231,17 @@ Understanding the lifecycle, day phases, and different types of automation helps
 
 ### Contributing
 
-Contributions are welcome! If you would like to contribute, please open an issue or a pull request. For larger changes, please create an issue first to discuss the proposed change. Optionally add a CONTRIBUTING.md file with more details.
+Contributions are welcome! If you would like to contribute by improving existing content or fix errors, please open a pull request
+
+Steps:
+Fork the repository
+Create a feature branch: git checkout -b feature/your-feature-name
+Commit your changes: git commit -m 'updated content for section 1'
+Push to the branch: git push origin feature/your-feature-name
+Submit a pull request
 
 Key points:
-
-* Be respectful and follow a collaborative approach.
-* Open issues for bugs or feature requests.
-* Provide clear commit messages and include tests/examples where applicable.
+* Provide clear commit messages where applicable.
 
 ### License
 
